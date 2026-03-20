@@ -1,23 +1,34 @@
 # Dotfiles
 
-This repo now acts as a chezmoi source tree.
+This repo is now structured as a chezmoi source repo for macOS bootstrap.
 
-## Layout
+## Source Of Truth
 
-- `dot_config/nvim/` is the source state for your Neovim config.
-- `dot_tmux.conf` is the source state for `~/.tmux.conf`.
-- The top-level files in the repo are the current live Neovim config.
+- `home/dot_config/nvim/` is the authoritative Neovim source state.
+- `home/dot_tmux.conf` is the authoritative tmux source state.
+- `Brewfile` defines the core packages needed by this setup on a new Mac.
+- `.chezmoiroot` points chezmoi at `home/`, so repo files like this README are not applied to `$HOME`.
 
-## New Machine Flow
+The top-level Neovim files in this checkout are local symlinks back into `home/dot_config/nvim/`. That keeps the current machine working while avoiding drift between the live config and the chezmoi source.
 
-1. Install Homebrew.
-2. Install chezmoi.
-3. Clone this repo.
-4. Run `chezmoi init --apply /path/to/this/repo`.
+## New Mac
 
-If you want to add more tools later, add more source-state files at the repo root, for example:
+1. Install Xcode Command Line Tools with `xcode-select --install`.
+2. Install chezmoi with the official one-liner:
+   `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:0bmario/dotfiles.git`
+3. The first apply will install Homebrew if needed and then run `brew bundle` from `Brewfile`.
 
-- `dot_zshrc`
-- `dot_gitconfig`
-- `dot_config/alacritty/alacritty.toml`
+This repo is private, so the one-liner assumes the new Mac already has GitHub SSH access configured.
 
+## Current Coverage
+
+- Neovim
+- tmux
+- Core CLI packages for this config: `git`, `neovim`, `tmux`, `ripgrep`, `fd`, `fzf`, `stylua`, `lua-language-server`
+
+## Next Sensible Adds
+
+- `home/dot_zshrc`
+- `home/dot_gitconfig`
+- `home/dot_config/ghostty/`
+- Secrets or machine-specific data through chezmoi templates

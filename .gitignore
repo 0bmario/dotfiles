@@ -6,4 +6,5 @@ debug
 foo.*
 *.log
 .nvimlog
+.DS_Store
 data
