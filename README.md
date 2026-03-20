@@ -26,7 +26,7 @@ This repo is private, so the one-liner assumes the new Mac already has GitHub SS
 - tmux
 - zsh
 - Git config
-- Core CLI packages for this config: `git`, `git-lfs`, `neovim`, `tmux`, `ripgrep`, `fd`, `fzf`, `stylua`, `lua-language-server`
+- Core CLI packages for this config: `chezmoi`, `git`, `git-lfs`, `neovim`, `tmux`, `ripgrep`, `fd`, `fzf`, `stylua`, `lua-language-server`
 
 ## Next Sensible Adds
 

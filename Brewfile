@@ -1,3 +1,4 @@
+brew "chezmoi"
 brew "fd"
 brew "fzf"
 brew "git"
