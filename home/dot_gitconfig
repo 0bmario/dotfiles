@@ -1,0 +1,10 @@
+[user]
+	name = Mario Maita Orozco
+	email = thetechpomelo@gmail.com
+
+[init]
+	defaultBranch = main
+
+[core]
+	excludesfile = ~/.gitignore_global
+
