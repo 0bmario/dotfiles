@@ -32,3 +32,7 @@ This repo is private, so the one-liner assumes the new Mac already has GitHub SS
 
 - `home/dot_config/ghostty/`
 - Secrets or machine-specific data through chezmoi templates
+
+## Local Overrides
+
+- Put machine-specific shell setup in `~/.zshrc.local` if needed. The shared `zshrc` intentionally stays minimal.
