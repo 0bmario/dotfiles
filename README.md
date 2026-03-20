@@ -24,11 +24,11 @@ This repo is private, so the one-liner assumes the new Mac already has GitHub SS
 
 - Neovim
 - tmux
+- zsh
 - Git config
 - Core CLI packages for this config: `git`, `git-lfs`, `neovim`, `tmux`, `ripgrep`, `fd`, `fzf`, `stylua`, `lua-language-server`
 
 ## Next Sensible Adds
 
-- `home/dot_zshrc`
 - `home/dot_config/ghostty/`
 - Secrets or machine-specific data through chezmoi templates
